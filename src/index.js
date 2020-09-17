@@ -25,3 +25,27 @@ export default function Typical({ steps, loop, className, wrapper = "p" }) {
 
   return <Component ref={typicalRef} className={styles.typicalWrapper}/>;
 }
+
+export function useTypical({ steps, loop }) {
+  const typicalRef = useRef(null);
+  const Component = wrapper;
+
+  useEffect(() => {
+    if (loop === Infinity) {
+      type(typicalRef.current, ...steps, loopedType);
+    } else if (typeof loop === "number") {
+      type(
+        typicalRef.current,
+        ...Array(loop)
+          .fill(steps)
+          .flat()
+      );
+    } else {
+      type(typicalRef.current, ...steps);
+    }
+  });
+
+  return {
+    [Component]: () => <Component ref={typicalRef} className={styles.typicalWrapper}/>
+  };
+}

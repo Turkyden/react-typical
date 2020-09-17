@@ -53,7 +53,7 @@ function Example() {
   })
   
   return (
-    <typical.p></typical.p>
+    <typical.p />
   )
 }
 ```

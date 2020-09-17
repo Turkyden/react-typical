@@ -40,6 +40,24 @@ class Example extends React.Component {
 }
 ```
 
+React Hook
+
+```jsx
+import React, { Component } from 'react'
+import Typical { useTypical } from 'react-typical'
+
+function Example() {
+  const typical = useTypical({
+    steps={['Hello', 1000, 'Hello world!', 500]}
+    loop={Infinity}
+  })
+  
+  return (
+    <typical.p></typical.p>
+  )
+}
+```
+
 ## Properties
 
 prop|mandatory|type|Eg.

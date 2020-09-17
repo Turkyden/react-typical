@@ -44,7 +44,7 @@ React Hook
 
 ```jsx
 import React, { Component } from 'react'
-import Typical { useTypical } from 'react-typical'
+import Typical, { useTypical } from 'react-typical'
 
 function Example() {
   const typical = useTypical({
